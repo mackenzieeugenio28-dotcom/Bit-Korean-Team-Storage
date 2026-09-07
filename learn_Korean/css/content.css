@@ -1,0 +1,80 @@
+/* ============================================================
+   K-Drama Korean — content.css (guide.html / about.html)
+   ============================================================ */
+
+/* ---------- Content page hero ---------- */
+.content-hero { background: linear-gradient(120deg, var(--navy-900), var(--navy-700)); color: #fff; padding: 64px 0 50px; }
+.content-hero .kicker { color: #FFA9C9; }
+.content-hero .kicker::before { background: #FFA9C9; }
+.content-hero h1 { font-size: clamp(1.9rem, 3.8vw, 2.7rem); font-weight: 900; margin-bottom: 14px; max-width: 760px; }
+.content-hero__sub { color: #C9D2EC; max-width: 640px; font-size: 1.03rem; margin: 0 0 22px; }
+.content-hero__kr { margin: 0; }
+.content-narrow { max-width: 760px; }
+.content-narrow p { color: var(--muted); font-size: 1.02rem; }
+
+/* ---------- Guide steps ---------- */
+.guide-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+@media (max-width: 760px) { .guide-steps { grid-template-columns: 1fr; } }
+.guide-step { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; box-shadow: var(--shadow-sm); position: relative; }
+.guide-step__num {
+  position: absolute; top: 18px; right: 20px;
+  font-size: 2.4rem; font-weight: 900; color: var(--pink-100); line-height: 1;
+}
+.guide-step h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
+.guide-step p { font-size: .92rem; color: var(--muted); margin: 0; }
+
+/* ---------- Rules (XP / constraints) ---------- */
+.rule-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 700px) { .rule-grid { grid-template-columns: 1fr; } }
+.rule-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; box-shadow: var(--shadow-sm); }
+.rule-card h3 { font-size: .98rem; font-weight: 800; color: var(--navy-900); margin-bottom: 8px; }
+.rule-card p { font-size: .9rem; color: var(--muted); margin: 0; }
+
+/* ---------- Tips ---------- */
+.tips-list { list-style: none; margin: 0 auto; padding: 0; max-width: 680px; display: grid; gap: 12px; counter-reset: tip; }
+.tips-list li {
+  counter-increment: tip; position: relative;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 16px 20px 16px 62px; box-shadow: var(--shadow-sm); font-size: .95rem;
+}
+.tips-list li::before {
+  content: counter(tip); position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+  width: 32px; height: 32px; border-radius: 10px; background: var(--blue-100); color: var(--blue-700);
+  font-weight: 900; display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* ---------- FAQ ---------- */
+.faq-list { max-width: 720px; margin: 0 auto; display: grid; gap: 12px; }
+.faq-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); overflow: hidden; }
+.faq-item summary {
+  list-style: none; cursor: pointer; font-weight: 800; font-size: .98rem;
+  padding: 17px 20px; display: flex; align-items: center; gap: 12px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before {
+  content: ""; flex: none; width: 9px; height: 9px; border-right: 2.5px solid var(--pink-600); border-bottom: 2.5px solid var(--pink-600);
+  transform: rotate(-45deg); transition: transform .18s ease; margin-top: -3px;
+}
+.faq-item[open] summary::before { transform: rotate(45deg); margin-top: 3px; }
+.faq-item summary:hover { color: var(--pink-700); }
+.faq-item p { margin: 0; padding: 0 20px 18px 41px; color: var(--muted); font-size: .93rem; }
+
+/* ---------- Tech grid ---------- */
+.tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 860px) { .tech-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .tech-grid { grid-template-columns: 1fr; } }
+.tech-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; box-shadow: var(--shadow-sm); }
+.tech-item h3 { font-size: 1rem; font-weight: 900; color: var(--pink-700); margin-bottom: 6px; }
+.tech-item p { font-size: .88rem; color: var(--muted); margin: 0; }
+
+/* ---------- Timeline ---------- */
+.timeline { list-style: none; margin: 0 auto; padding: 0; max-width: 680px; display: grid; gap: 14px; counter-reset: week; }
+.timeline__item { display: flex; gap: 16px; align-items: flex-start; background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .14); border-radius: var(--radius); padding: 18px 20px; }
+.timeline__week {
+  flex: none; width: 46px; height: 46px; border-radius: 14px; background: var(--pink-600); color: #fff;
+  font-weight: 900; display: inline-flex; align-items: center; justify-content: center; font-size: .9rem;
+  box-shadow: 0 6px 14px rgba(242, 107, 156, .4);
+}
+.timeline__item:nth-child(2) .timeline__week { background: var(--blue-600); box-shadow: 0 6px 14px rgba(91, 141, 239, .4); }
+.timeline__item:nth-child(3) .timeline__week { background: var(--green-600); box-shadow: 0 6px 14px rgba(63, 169, 124, .4); }
+.timeline__item p { color: #E8EBF5; margin: 6px 0 0; font-size: .95rem; }

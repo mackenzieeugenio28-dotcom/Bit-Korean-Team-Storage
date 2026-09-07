@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team — K-Drama Korean</title>
+<meta name="description" content="Meet the six-member team behind K-Drama Korean — project manager, structure, design, JavaScript and testing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23F26B9C'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='36' font-weight='bold' text-anchor='middle' fill='white'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn" crossorigin>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/group.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================= Header ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="K-Drama Korean home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>
+      </span>
+      <span class="brand-text">K-Drama <strong>Korean</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="course.html" data-i18n="nav.courses">Courses</a>
+      <a href="group.html" data-i18n="nav.group">Our Team</a>
+      <a href="guide.html" data-i18n="nav.guide">Guide</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <div class="nav-auth" id="navAuth">
+        <a href="login.html" class="btn btn--ghost btn--sm" data-i18n="nav.login">Log in</a>
+        <a href="register.html" class="btn btn--primary btn--sm" data-i18n="nav.register">Sign up</a>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Language switcher">
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="zh">中文</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ================= Hero ================= -->
+  <section class="group-hero">
+    <div class="container group-hero__inner">
+      <div class="group-hero__text">
+        <p class="kicker" data-i18n="group.hero.kicker">Our team</p>
+        <h1 data-i18n="group.hero.title">Six drama fans, one course project</h1>
+        <p class="group-hero__sub" data-i18n="group.hero.sub">We are second-year Computer Science students who turned our K-drama habit into this website.</p>
+        <p class="group-hero__name">
+          <span class="subtitle-bar" data-i18n="group.name.zh">韩语从入门到入土</span>
+          <span class="group-hero__name-en" data-i18n="group.name.kr">“Korean from Zero to the Grave”</span>
+        </p>
+      </div>
+      <div class="group-hero__img" aria-hidden="true">
+        <img src="https://aka.doubaocdn.com/s/XF60a63pzy" alt="" width="2048" height="1152">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Team grid ================= -->
+  <section class="section" aria-labelledby="teamTitle">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <p class="kicker" data-i18n="group.team.kicker">Who we are</p>
+        <h2 class="sec-title" id="teamTitle" data-i18n="group.team.title">Meet the team</h2>
+        <p class="sec-sub" data-i18n="group.team.sub">Each of us owns one module, and we review each other’s code. Click a member to visit their personal page.</p>
+      </div>
+      <div class="member-grid">
+        <!-- 温勇恒 -->
+        <article class="member-card">
+          <a class="member-card__avatar" href="./members/wunYongheng.html" style="--av:linear-gradient(135deg,#F26B9C,#F5A0BC)" aria-hidden="true">温</a>
+          <h3 class="member-card__name">温勇恒 <span>Wen Yongheng</span></h3>
+          <p class="member-card__role" data-i18n="group.role.pm">Project manager &amp; core logic</p>
+          <p class="member-card__id">1820251085</p>
+          <a class="btn btn--ghost btn--sm" href="./members/wunYongheng.html" data-i18n="group.visit">Visit page</a>
+        </article>
+        <!-- 王家乐 -->
+        <article class="member-card">
+          <a class="member-card__avatar" href="./members/wangJiale.html" style="--av:linear-gradient(135deg,#5B8DEF,#8FB4F5)" aria-hidden="true">王</a>
+          <h3 class="member-card__name">王家乐 <span>Wang Jiale</span></h3>
+          <p class="member-card__role" data-i18n="group.role.html">Site structure &amp; HTML</p>
+          <p class="member-card__id">1120250728</p>
+          <a class="btn btn--ghost btn--sm" href="./members/wangJiale.html" data-i18n="group.visit">Visit page</a>
+        </article>
+        <!-- 文境仑 -->
+        <article class="member-card">
+          <a class="member-card__avatar" href="./members/wenJinglun/index.html" style="--av:linear-gradient(135deg,#3FA97C,#8FD9BC)" aria-hidden="true">文</a>
+          <h3 class="member-card__name">文境仑 <span>Wen Jinglun</span></h3>
+          <p class="member-card__role" data-i18n="group.role.css">Visual design &amp; CSS</p>
+          <p class="member-card__id">1820251080</p>
+          <a class="btn btn--ghost btn--sm" href="./members/wenJinglun/index.html" data-i18n="group.visit">Visit page</a>
+        </article>
+        <!-- 沈泓铎 -->
+        <article class="member-card">
+          <a class="member-card__avatar" href="./members/shenHongduo.html" style="--av:linear-gradient(135deg,#E8A33D,#F5CE8F)" aria-hidden="true">沈</a>
+          <h3 class="member-card__name">沈泓铎 <span>Shen Hongduo</span></h3>
+          <p class="member-card__role" data-i18n="group.role.content">Creative &amp; content</p>
+          <p class="member-card__id">1120253190</p>
+          <a class="btn btn--ghost btn--sm" href="./members/shenHongduo.html" data-i18n="group.visit">Visit page</a>
+        </article>
+        <!-- 米丽 -->
+        <article class="member-card">
+          <a class="member-card__avatar" href="./members/mily/index.html" style="--av:linear-gradient(135deg,#9B6FE8,#C3A6F5)" aria-hidden="true">米</a>
+          <h3 class="member-card__name">米丽 <span>Mily</span></h3>
+          <p class="member-card__role" data-i18n="group.role.fe">Front-end &amp; JavaScript</p>
+          <p class="member-card__id">1820251149</p>
+          <a class="btn btn--ghost btn--sm" href="./members/mily/index.html" data-i18n="group.visit">Visit page</a>
+        </article>
+        <!-- 徐召召 -->
+        <article class="member-card">
+          <a class="member-card__avatar" href="./members/xuZhaozhao.html" style="--av:linear-gradient(135deg,#4CB58A,#8FD9BC)" aria-hidden="true">徐</a>
+          <h3 class="member-card__name">徐召召 <span>Xu Zhaozhao</span></h3>
+          <p class="member-card__role" data-i18n="group.role.qa">Testing &amp; docs</p>
+          <p class="member-card__id">1320260217</p>
+          <a class="btn btn--ghost btn--sm" href="./members/xuZhaozhao.html" data-i18n="group.visit">Visit page</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Story ================= -->
+  <section class="section section--tint" aria-labelledby="storyTitle">
+    <div class="container group-story">
+      <div>
+        <p class="kicker" data-i18n="group.story.kicker">Our story</p>
+        <h2 class="sec-title" data-i18n="group.story.title">Why we built this</h2>
+        <p class="group-story__p" data-i18n="group.story.p1">We are all K-drama fans, and we noticed that most Korean-learning tools are either too textbook-like or too scattered. This project fuses systematic micro-learning with the immersive drama content we love.</p>
+        <p class="group-story__p" data-i18n="group.story.p2">Built from scratch in three weeks with plain HTML, CSS and JavaScript — no frameworks, no servers, no excuses.</p>
+        <p class="group-story__kr">화이팅! <span>— “Team, let’s go!”</span></p>
+      </div>
+      <div class="group-story__img" aria-hidden="true">
+        <img src="https://aka.doubaocdn.com/s/XF60a63pzy" alt="" loading="lazy" width="2048" height="1152">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Division of work ================= -->
+  <section class="section" aria-labelledby="dutyTitle">
+    <div class="container">
+      <div class="sec-head sec-head--center">
+        <p class="kicker" data-i18n="group.roles.kicker">Division of work</p>
+        <h2 class="sec-title" id="dutyTitle" data-i18n="group.roles.title">Everyone owns a module</h2>
+        <p class="sec-sub" data-i18n="group.roles.note">All code is reviewed by at least one other member before merging.</p>
+      </div>
+      <div class="duty-grid">
+        <article class="duty-card">
+          <h3 data-i18n="group.duty.pm.t">Project manager &amp; CIO</h3>
+          <p data-i18n="group.duty.pm.d">Schedule control, tech choices, core logic, Git branch management and merging.</p>
+        </article>
+        <article class="duty-card">
+          <h3 data-i18n="group.duty.html.t">Site structure</h3>
+          <p data-i18n="group.duty.html.d">Writes all HTML skeletons with semantic tags, coordinates class names with the CSS member.</p>
+        </article>
+        <article class="duty-card">
+          <h3 data-i18n="group.duty.css.t">Visual design &amp; CSS</h3>
+          <p data-i18n="group.duty.css.d">Korean pink/blue &amp; black-white theme, font scale, all stylesheets, responsive media queries.</p>
+        </article>
+        <article class="duty-card">
+          <h3 data-i18n="group.duty.js.t">JavaScript &amp; storage</h3>
+          <p data-i18n="group.duty.js.d">Wraps localStorage read/write (getProgress / saveProgress), syncs completion state, recovers the current step after refresh.</p>
+        </article>
+        <article class="duty-card">
+          <h3 data-i18n="group.duty.qa.t">Testing &amp; docs</h3>
+          <p data-i18n="group.duty.qa.d">Writes test-case lists, tests on Chrome/Firefox/Edge, writes README and demo materials.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>
+          </span>
+          <span class="brand-text">K-Drama <strong>Korean</strong></span>
+        </a>
+        <p data-i18n="footer.blurb">Learn real Korean through the lines of your favourite K-dramas. Four short steps per lesson, points and streaks to keep you going.</p>
+      </div>
+      <div>
+        <p class="footer-title" data-i18n="footer.explore">Explore</p>
+        <ul class="footer-list">
+          <li><a href="index.html" data-i18n="footer.explore.home">Home</a></li>
+          <li><a href="course.html" data-i18n="footer.explore.courses">Course list</a></li>
+          <li><a href="group.html" data-i18n="footer.explore.group">Our team</a></li>
+          <li><a href="guide.html" data-i18n="footer.explore.guide">Learning guide</a></li>
+          <li><a href="about.html" data-i18n="footer.explore.about">About this project</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title" data-i18n="footer.account">Account</p>
+        <ul class="footer-list">
+          <li><a href="login.html" data-i18n="footer.account.login">Log in</a></li>
+          <li><a href="register.html" data-i18n="footer.account.register">Create an account</a></li>
+          <li><a href="guide.html#faq" data-i18n="footer.account.guide">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">Course project · Software Engineering Fundamentals · 2026</span>
+      <span><span data-i18n="footer.built">Built with HTML + CSS + JS by Team</span> “<span data-i18n="group.name.zh">韩语从入门到入土</span>”</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
