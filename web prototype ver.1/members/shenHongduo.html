@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人介绍 - 韩剧学韩语</title>
+    <style>
+        /* ===== 全局重置 & 基础 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f5f2;
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 24px;
+            color: #2c2c2c;
+        }
+
+        /* ===== 卡片容器 ===== */
+        .profile-card {
+            max-width: 560px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 40px 36px 44px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .profile-card:hover {
+            box-shadow: 0 10px 36px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ===== 头像区域 ===== */
+        .avatar-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 22px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #e8e4de;
+            display: block;
+            border: 2px solid #f0ede8;
+        }
+
+        /* 图片未加载时的占位文字（可选） */
+        .avatar-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #e8e4de;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa49c;
+            font-size: 14px;
+            border: 2px solid #f0ede8;
+        }
+
+        /* ===== 姓名 ===== */
+        .name {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #1e1e1e;
+            margin-bottom: 6px;
+        }
+
+        /* ===== 角色/小标签（可选） ===== */
+        .role-tag {
+            text-align: center;
+            font-size: 14px;
+            color: #9a948c;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== 分割线 ===== */
+        .divider {
+            width: 40px;
+            height: 2px;
+            background: #ddd8d0;
+            margin: 0 auto 24px auto;
+            border-radius: 2px;
+        }
+
+        /* ===== 简介正文 ===== */
+        .bio {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #3a3a3a;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        .bio p {
+            margin-bottom: 14px;
+        }
+
+        .bio p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== 底部返回链接（轻量化） ===== */
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid #f0ede8;
+            font-size: 14px;
+        }
+
+        .back-link a {
+            color: #8a847c;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .back-link a:hover {
+            color: #4a4640;
+            text-decoration: underline;
+        }
+
+        /* ===== 响应式微调 ===== */
+        @media (max-width: 480px) {
+            .profile-card {
+                padding: 28px 20px 32px;
+            }
+
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            .name {
+                font-size: 22px;
+            }
+
+            .bio {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+
+        <!-- ====== 头像 ====== -->
+        <div class="avatar-wrapper">
+            <!-- 
+                将 src 替换为实际图片路径即可。
+                如果图片加载失败，会显示 alt 文字。
+            -->
+            <img 
+                class="avatar" 
+                src="images/members/your_name.jpg" 
+                alt="个人照片"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <!-- 图片加载失败时的占位（自动显示） -->
+            <div class="avatar-placeholder" style="display:none;">
+                📷 照片
+            </div>
+        </div>
+
+        <!-- ====== 姓名 ====== -->
+        <h1 class="name">你的名字</h1>
+
+        <!-- ====== 角色标签（可删或改） ====== -->
+        <p class="role-tag">前端开发 · 韩剧爱好者</p>
+
+        <!-- ====== 分割线 ====== -->
+        <div class="divider"></div>
+
+        <!-- ====== 个人简介（不少于200字） ====== -->
+        <div class="bio">
+            <p>
+                你好！我是 <strong>你的名字</strong>，计算机科学与技术专业大二学生。
+                性格温和，做事踏实，喜欢安安静静地写代码，也喜欢在周末窝在沙发里看一部好剧。
+            </p>
+            <p>
+                和韩剧的缘分始于高中的某个寒假，无意间点开了《请回答1988》，
+                从此便一头扎进了这个温暖又细腻的世界。对我来说，韩剧不仅是消遣，
+                更是一扇了解另一种文化的窗。那些生活化的对白、细腻的情感表达，
+                总能让我在放松的同时，悄悄记住几个地道的韩语表达。
+            </p>
+            <p>
+                选择加入「韩剧学韩语」这个项目，其实也是想把这份「边看剧边学习」
+                的快乐分享给更多人。虽然目前技术还在成长中，但我会认真完成自己负责的部分，
+                也会在团队里做好自己的角色，和大家一起把这件事做成。
+            </p>
+            <p>
+                希望在接下来的几周里，和组员们一起打磨出这个有趣的学习工具，
+                也期待自己能在项目中积累更多实战经验。请多指教！
+            </p>
+        </div>
+
+        <!-- ====== 返回小组介绍 ====== -->
+        <div class="back-link">
+            <a href="../introduction.html">← 回到小组介绍</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

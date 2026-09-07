@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>徐召召 · 个人介绍</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --accent: #0e7c7b;
+    --accent-dark: #0a5f5e;
+    --accent-bg: #e2f2f1;
+    --text: #26343c;
+    --text-light: #5f7079;
+    --photo-w: clamp(230px, 26vw, 330px);
+  }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(135deg, #f5fafb 0%, #e9f3f5 55%, #d9eced 100%);
+    overflow-x: hidden;
+  }
+
+  .stage {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .stage::before, .stage::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: .35;
+    z-index: 0;
+  }
+  .stage::before {
+    width: 46vmin; height: 46vmin;
+    background: radial-gradient(circle, rgba(14,124,123,.22), transparent 70%);
+    top: -12vmin; right: -10vmin;
+  }
+  .stage::after {
+    width: 38vmin; height: 38vmin;
+    background: radial-gradient(circle, rgba(240,164,52,.20), transparent 70%);
+    bottom: -10vmin; left: -8vmin;
+  }
+
+  /* 照片：先居中淡入，再移动到左侧 */
+  .photo-frame {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: var(--photo-w);
+    aspect-ratio: 4 / 5;
+    margin-left: calc(var(--photo-w) / -2);
+    margin-top: calc(var(--photo-w) * -0.625);
+    opacity: 0;
+    z-index: 2;
+    animation: photoFlow 3.8s ease .2s forwards;
+  }
+
+  .photo-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 6px solid #ffffff;
+    box-shadow: 0 20px 45px rgba(23, 74, 88, .25);
+  }
+
+  .photo-name {
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    transform: translateX(-50%);
+    background: rgba(12, 66, 65, .82);
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 3px;
+    padding: 6px 18px;
+    border-radius: 999px;
+    white-space: nowrap;
+    backdrop-filter: blur(4px);
+  }
+
+  @keyframes photoFlow {
+    0%   { opacity: 0; transform: scale(.55) translateY(24px); }
+    16%  { opacity: 1; transform: scale(1)   translateY(0); }
+    42%  { opacity: 1; transform: scale(1)   translateY(0); }
+    68%,
+    100% { opacity: 1; transform: translateX(-25vw) scale(.97); }
+  }
+
+  /* 信息面板：从右侧滑入，内容从上到下依次显现 */
+  .info-panel {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(600px, 44vw);
+    padding: 40px 44px;
+    background: rgba(255, 255, 255, .82);
+    border: 1px solid rgba(255, 255, 255, .9);
+    border-radius: 22px;
+    box-shadow: 0 24px 60px rgba(23, 74, 88, .14);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    z-index: 2;
+    animation: infoIn .7s cubic-bezier(.22, .78, .3, 1) 2.5s forwards;
+  }
+
+  .reveal {
+    opacity: 0;
+    animation: revealUp .5s ease forwards;
+  }
+  .reveal-1 { animation-delay: 2.9s; }
+  .reveal-2 { animation-delay: 3.05s; }
+  .reveal-3 { animation-delay: 3.2s; }
+  .reveal-4 { animation-delay: 3.35s; }
+  .reveal-5 { animation-delay: 3.5s; }
+
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .info-panel h1 {
+    font-size: clamp(30px, 3.6vw, 42px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .role {
+    display: inline-block;
+    background: var(--accent-bg);
+    color: var(--accent-dark);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(14, 124, 123, .25);
+    margin-bottom: 18px;
+  }
+
+  .divider {
+    height: 2px;
+    width: 64px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  .block { margin-bottom: 18px; }
+  .block:last-child { margin-bottom: 0; }
+  .block-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .block p {
+    font-size: 14.5px;
+    line-height: 1.9;
+    color: var(--text);
+    text-align: justify;
+  }
+
+  @keyframes infoIn {
+    0%   { opacity: 0; transform: translateY(-50%) translateX(90px); }
+    100% { opacity: 1; transform: translateY(-50%) translateX(0); }
+  }
+
+  .footer {
+    position: absolute;
+    left: 0; right: 0; bottom: 18px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1s ease 3.6s forwards;
+  }
+  @keyframes fadeIn { to { opacity: 1; } }
+
+  /* 移动端适配 */
+  @media (max-width: 767px) {
+    .photo-frame { animation: photoFlowMobile 3.8s ease .2s forwards; }
+    @keyframes photoFlowMobile {
+      0%   { opacity: 0; transform: scale(.55) translateY(24px); }
+      16%  { opacity: 1; transform: scale(1)   translateY(0); }
+      42%  { opacity: 1; transform: scale(1)   translateY(0); }
+      68%,
+      100% { opacity: 1; transform: translateY(-32vh) scale(.8); }
+    }
+
+    .info-panel {
+      left: 50%;
+      top: 58%;
+      width: min(560px, 90vw);
+      transform: translateX(-50%);
+      padding: 30px 24px;
+      animation: infoInMobile .9s cubic-bezier(.22, .78, .3, 1) 2.5s forwards;
+    }
+    @keyframes infoInMobile {
+      0%   { opacity: 0; transform: translateX(-50%) translateY(56px); }
+      100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+
+    .photo-name { font-size: 13px; padding: 5px 14px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .photo-frame, .info-panel, .footer, .reveal { animation-duration: .01s; animation-delay: 0s; }
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+
+    <figure class="photo-frame">
+      <img src="../images/members/xuZhaozhao.jpg" alt="徐召召的照片">
+      <figcaption class="photo-name">徐召召</figcaption>
+    </figure>
+
+    <section class="info-panel">
+      <h1 class="reveal reveal-1">徐召召</h1>
+
+      <div class="role reveal reveal-2">测试与文档编写</div>
+
+      <div class="divider reveal reveal-3"></div>
+
+      <div class="block reveal reveal-4">
+        <div class="block-title">工作内容</div>
+        <p>软件测试与文档编写。日常跟 bug 斗智斗勇，把产品里藏着的小毛病一个个揪出来；同时把复杂的功能逻辑翻译成用户看得懂的文字，写操作手册、测试报告、技术文档。坚信好产品是测出来的，好文档是写出来的。</p >
+      </div>
+
+      <div class="block reveal reveal-5">
+        <div class="block-title">兴趣爱好</div>
+        <p>乒乓球爱好者。球拍比键盘还顺手，正手比回车还快。球桌上的每一次扣杀，都是对 bug 的精准打击；每一次擦网，都是测试用例里的边界值。赢了庆祝，输了复盘——毕竟，测试工程师连输球都得写个缺陷报告。</p >
+      </div>
+    </section>
+
+    <footer class="footer">© 2026 徐召召 · 欢迎交流</footer>
+  </div>
+</body>
+</html>
