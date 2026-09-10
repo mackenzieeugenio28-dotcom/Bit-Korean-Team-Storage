@@ -1,0 +1,28 @@
+/* ============================================================
+   K-Drama Korean — course.css (course.html)
+   ============================================================ */
+
+/* ---------- Page hero ---------- */
+.page-hero { background: linear-gradient(120deg, var(--navy-900), var(--navy-700)); color: #fff; padding: 66px 0 44px; }
+.page-hero h1 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 900; margin-bottom: 12px; max-width: 720px; }
+.page-hero .kicker { color: #FFA9C9; }
+.page-hero .kicker::before { background: #FFA9C9; }
+.page-hero__sub { color: #C9D2EC; max-width: 640px; margin: 0; font-size: 1.02rem; }
+.course-progress-line { margin: 22px 0 0; font-size: .9rem; color: #FFD9E6; font-weight: 600; }
+.course-progress-line .done-count { color: #9DF0C8; }
+
+/* ---------- Filter bar ---------- */
+.filter-bar { display: flex; flex-direction: column; gap: 16px; }
+.filter-search { position: relative; max-width: 420px; }
+.filter-search .svg-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); width: 18px; height: 18px; }
+.filter-search .input { padding-left: 42px; }
+.filter-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ---------- Grid & cards ---------- */
+.course-grid--full { margin-top: 8px; }
+.course-card { scroll-margin-top: 96px; }
+.course-card__scene { font-size: .84rem; color: var(--muted); margin: 0; line-height: 1.55; }
+.course-empty {
+  background: var(--card); border: 1px dashed var(--line); border-radius: var(--radius);
+  padding: 48px 24px; text-align: center; color: var(--muted); font-weight: 600;
+}

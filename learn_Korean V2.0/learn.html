@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson — K-Drama Korean</title>
+<meta name="description" content="Learn Korean from a K-drama line in four steps: listen &amp; guess, line breakdown, words &amp; grammar, mini quiz.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23F26B9C'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='36' font-weight='bold' text-anchor='middle' fill='white'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn" crossorigin>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/learn.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================= Header ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="K-Drama Korean home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>
+      </span>
+      <span class="brand-text">K-Drama <strong>Korean</strong></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="course.html" data-i18n="nav.courses">Courses</a>
+      <a href="wrong.html" data-i18n="nav.wrong">Mistake Book</a>
+      <a href="group.html" data-i18n="nav.group">Our Team</a>
+      <a href="guide.html" data-i18n="nav.guide">Guide</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <div class="nav-auth" id="navAuth">
+        <a href="login.html" class="btn btn--ghost btn--sm" data-i18n="nav.login">Log in</a>
+        <a href="register.html" class="btn btn--primary btn--sm" data-i18n="nav.register">Sign up</a>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Language switcher">
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="zh">中文</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ================= Lesson header ================= -->
+  <section class="lesson-hero" id="lessonHero">
+    <div class="container">
+      <a class="lesson-back" href="course.html" data-i18n="learn.back">← Back to courses</a>
+      <div class="lesson-head-row">
+        <div class="lesson-head-info">
+          <p class="kicker" id="lessonKicker"></p>
+          <h1 id="lessonTitle"></h1>
+          <p class="lesson-scene" id="lessonScene"></p>
+          <p class="lesson-meta" id="lessonMeta"></p>
+        </div>
+        <div class="lesson-cover" id="lessonCover"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Stepper ================= -->
+  <section class="section">
+    <div class="container">
+      <ol class="stepper" id="stepper" aria-label="Learning steps">
+        <li class="stepper__item is-active" data-step="1">
+          <button type="button" class="stepper__btn" data-goto="1">
+            <span class="stepper__num">1</span>
+            <span class="stepper__label" data-i18n="learn.step1.title">Listen &amp; guess</span>
+          </button>
+        </li>
+        <li class="stepper__item" data-step="2">
+          <button type="button" class="stepper__btn" data-goto="2">
+            <span class="stepper__num">2</span>
+            <span class="stepper__label" data-i18n="learn.step2.title">Line breakdown</span>
+          </button>
+        </li>
+        <li class="stepper__item" data-step="3">
+          <button type="button" class="stepper__btn" data-goto="3">
+            <span class="stepper__num">3</span>
+            <span class="stepper__label" data-i18n="learn.step3.title">Words &amp; grammar</span>
+          </button>
+        </li>
+        <li class="stepper__item" data-step="4">
+          <button type="button" class="stepper__btn" data-goto="4">
+            <span class="stepper__num">4</span>
+            <span class="stepper__label" data-i18n="learn.step4.title">Mini quiz</span>
+          </button>
+        </li>
+      </ol>
+      <p class="stepper-hint" data-i18n="learn.steps.hint">Follow the four steps in order.</p>
+
+      <!-- ============ Step 1 : Listen & guess ============ -->
+      <section class="step-panel" id="panel-1" aria-labelledby="panelTitle1">
+        <div class="panel-head">
+          <p class="kicker" data-i18n="learn.step">Step {n} of 4</p>
+          <h2 id="panelTitle1" data-i18n="learn.step1.title">Listen &amp; guess</h2>
+          <p class="panel-lead" data-i18n="learn.step1.lead">Play the line and guess what it means. Do not look at the Korean yet!</p>
+        </div>
+        <div class="listen-box">
+          <div class="media-player hidden" id="mediaPlayer">
+            <video id="lessonVideo" controls playsinline preload="metadata"></video>
+          </div>
+          <button type="button" class="btn btn--primary btn--lg" id="playBtn">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span data-i18n="learn.play">Play the line</span>
+          </button>
+          <p class="listen-status text-muted" id="listenStatus" aria-live="polite"></p>
+          <p class="listen-roman hidden" id="listenRoman" aria-live="polite" data-i18n="learn.loading">Loading…</p>
+        </div>
+        <div class="guess-box hidden" id="guessBox">
+          <h3 data-i18n="learn.guess.q">What does the line mean?</h3>
+          <div class="guess-options" id="guessOptions" role="radiogroup" aria-label="Guess the meaning"></div>
+          <button type="button" class="btn btn--blue" id="guessCheckBtn" disabled data-i18n="learn.guess.check">Check my guess</button>
+          <p class="guess-feedback" id="guessFeedback" aria-live="polite"></p>
+        </div>
+        <div class="reveal-box hidden" id="revealBox">
+          <p class="kicker" data-i18n="learn.reveal">Reveal the Korean line</p>
+          <p class="subtitle-bar subtitle-bar--kr" id="revealKr"></p>
+          <p class="reveal-roman" id="revealRoman"></p>
+          <p class="reveal-trans" id="revealTrans"></p>
+        </div>
+      </section>
+
+      <!-- ============ Step 2 : Line breakdown ============ -->
+      <section class="step-panel hidden" id="panel-2" aria-labelledby="panelTitle2">
+        <div class="panel-head">
+          <p class="kicker" data-i18n="learn.step">Step {n} of 4</p>
+          <h2 id="panelTitle2" data-i18n="learn.step2.title">Line breakdown</h2>
+          <p class="panel-lead" data-i18n="learn.step2.lead">The whole line, plus every word explained.</p>
+        </div>
+        <div class="breakdown-card">
+          <p class="subtitle-bar subtitle-bar--kr" id="bdKr"></p>
+          <p class="breakdown-roman" id="bdRoman"></p>
+          <p class="breakdown-trans" id="bdTrans"></p>
+        </div>
+        <div class="word-table" id="wordTable"></div>
+      </section>
+
+      <!-- ============ Step 3 : Words & grammar ============ -->
+      <section class="step-panel hidden" id="panel-3" aria-labelledby="panelTitle3">
+        <div class="panel-head">
+          <p class="kicker" data-i18n="learn.step">Step {n} of 4</p>
+          <h2 id="panelTitle3" data-i18n="learn.step3.title">Words &amp; grammar</h2>
+          <p class="panel-lead" data-i18n="learn.step3.lead">Grab the key words and one grammar point.</p>
+        </div>
+        <div class="grammar-card" id="grammarCard"></div>
+        <h3 class="block-title" data-i18n="learn.step3.vocab">Key words</h3>
+        <div class="vocab-grid" id="vocabGrid"></div>
+      </section>
+
+      <!-- ============ Step 4 : Mini quiz ============ -->
+      <section class="step-panel hidden" id="panel-4" aria-labelledby="panelTitle4">
+        <div class="panel-head">
+          <p class="kicker" data-i18n="learn.step">Step {n} of 4</p>
+          <h2 id="panelTitle4" data-i18n="learn.step4.title">Mini quiz</h2>
+          <p class="panel-lead" data-i18n="learn.step4.lead">Three quick questions to lock it in. Pass with 2 of 3 to complete the lesson.</p>
+        </div>
+        <div class="quiz-box" id="quizBox">
+          <div class="quiz-progress-dots" id="quizDots" aria-label="Quiz question progress"></div>
+          <h3 class="quiz-question" id="quizQuestion"></h3>
+          <div class="quiz-options" id="quizOptions" role="radiogroup" aria-label="Quiz answers"></div>
+          <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+          <button type="button" class="btn btn--primary" id="quizNextBtn">Next</button>
+        </div>
+        <div class="quiz-result hidden" id="quizResult">
+          <h3 id="quizResultTitle"></h3>
+          <p class="quiz-result-score" id="quizResultScore"></p>
+          <p class="quiz-result-xp" id="quizResultXp"></p>
+          <div class="quiz-result-actions" id="quizResultActions"></div>
+        </div>
+      </section>
+
+      <!-- ============ Bottom navigation ============ -->
+      <div class="step-nav">
+        <button type="button" class="btn btn--ghost" id="prevBtn" data-i18n="learn.prev">Back</button>
+        <button type="button" class="btn btn--primary" id="nextBtn" disabled data-i18n="learn.next">Next</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>
+          </span>
+          <span class="brand-text">K-Drama <strong>Korean</strong></span>
+        </a>
+        <p data-i18n="footer.blurb">Learn real Korean through the lines of your favourite K-dramas. Four short steps per lesson, points and streaks to keep you going.</p>
+      </div>
+      <div>
+        <p class="footer-title" data-i18n="footer.explore">Explore</p>
+        <ul class="footer-list">
+          <li><a href="index.html" data-i18n="footer.explore.home">Home</a></li>
+          <li><a href="course.html" data-i18n="footer.explore.courses">Course list</a></li>
+          <li><a href="group.html" data-i18n="footer.explore.group">Our team</a></li>
+          <li><a href="guide.html" data-i18n="footer.explore.guide">Learning guide</a></li>
+          <li><a href="about.html" data-i18n="footer.explore.about">About this project</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title" data-i18n="footer.account">Account</p>
+        <ul class="footer-list">
+          <li><a href="login.html" data-i18n="footer.account.login">Log in</a></li>
+          <li><a href="register.html" data-i18n="footer.account.register">Create an account</a></li>
+          <li><a href="guide.html#faq" data-i18n="footer.account.guide">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">Course project · Software Engineering Fundamentals · 2026</span>
+      <span><span data-i18n="footer.built">Built with HTML + CSS + JS by Team</span> “<span data-i18n="group.name.zh">韩语从入门到入土</span>”</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/wrongbook.js"></script>
+<script src="js/learn.js"></script>
+</body>
+</html>
